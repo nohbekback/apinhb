@@ -9,6 +9,9 @@ from .serializers import MiModeloSerializer
 def login(request):
     return JsonResponse({'message': 'Bienvenidos a NOHBEK!'})
 
+#def mi_vista(request):
+ #   return JsonResponse("Hola, soy tu endpoint")
+
 def get_json_data(request):
     with open('data.json') as json_file:
         data=json.load(json_file)
@@ -19,6 +22,8 @@ class MiModeloList(generics.ListCreateAPIView):
     queryset = TUser.objects.all()
     queryset = TSession.objects.all()
     serializer_class = MiModeloSerializer
+
+
 
 
 
